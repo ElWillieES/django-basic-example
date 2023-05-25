@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Basic Example</title>
+</head>
+<body>
+
+<header>
+    <h1>Django Basic Example</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home'%}">Home</a></li>
+            <li><a href="{% url 'about'%}">About</a></li>
+            <li><a href="{% url 'contact'%}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<hr>
+<section>
+    {% block content %}
+    {% endblock %}
+</section>
+<hr>
+<footer>
+    <p>&copy; 2023 - Django Basic Example. All rights reserved.</p>
+</footer>
+</body>
+</html>

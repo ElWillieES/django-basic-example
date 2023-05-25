@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  django-basic-example:
+    image: django-basic-example
+    container_name: django-basic-example
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./docker-disks/django_staticfiles:/usr/src/app/staticfiles/
+  nginx:
+    image: nginx:1.23.4
+    container_name: nginx
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./docker-disks/django_staticfiles:/usr/src/app/staticfiles/
+    depends_on:
+      - django-basic-example
