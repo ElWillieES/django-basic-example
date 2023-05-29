@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="book-details">
+    <h2>{{ book.title }}</h2>
+    <p>Author: {{ book.author }}</p>
+    <p>Genre: {{ book.genre }}</p>
+    <p>Publish date: {{ book.publish_date }}</p>
+</div>
+
+{% if user.is_authenticated %}
+    <a href="{% url 'book_update' book.pk %}">Edit Book details</a> |
+    <a href="{% url 'book_delete' book.pk %}">Delete Book</a>
+{% endif %}
+{% endblock %}

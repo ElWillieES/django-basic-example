@@ -4,7 +4,7 @@
 <p>This is the Home page</p>
 <ul>
     {% for book in book_list %}
-        <li>{{ book.title }}</li>
+    <li><a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}

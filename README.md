@@ -9,7 +9,9 @@
 
 Este repo tiene un fin principalmente didáctico, como un ejemplo básico de proyecto Python con el framework Django y el IDE de PyCharm, gestión de paquetes o librerías (Virtual Environments), ejecución y depuración de código, dockerización y ejecución en local con Docker y Docker Compose, utilización de Gunicorn como servidor Web y NGINX como Proxy Inverso, etc.
 
-Se ha creado para complementar el Post [Python – Ejemplo de un proyecto básico con Python, Django y PyCharm](https://elwillie.es/2023/05/25/ejemplo-de-un-proyecto-basico-con-python-django-y-pycharm/) del Blog [El Willie - The Geeks invaders](https://elwillie.es) que tiene como objetivo ver los siguientes puntos:
+Se ha creado para complementar varios Post del Blog [El Willie - The Geeks invaders](https://elwillie.es), cada Post tiene el código en un tag de git.
+
+El Post [Python – Ejemplo de un proyecto básico con Python, Django y PyCharm](https://elwillie.es/2023/05/25/ejemplo-de-un-proyecto-basico-con-python-django-y-pycharm/) tiene como objetivo ver los siguientes puntos:
 
 * Cómo utilizar Plantillas (Templates) para crear páginas Web con Django, incluido la utilización de una plantilla base donde reutilizar la cabezará y pie de nuestras páginas.
 * Cómo crear un Modelo y utilizar el ORM de Django para crear las tablas de base de datos, en este caso, sobre SQLite.
@@ -17,6 +19,13 @@ Se ha creado para complementar el Post [Python – Ejemplo de un proyecto básic
 * Cómo utilizar Vistas basadas en Clases.
 * Cómo crear Pruebas Unitarias en Django, incluyendo la forma de generar un informe de cobertura y de subirlo a Sonar.
 * Cómo dockerizar nuestra aplicación con un NGINX y Gunicorn como servidor de aplicaciones, teniendo en cuenta, que en este caso tenemos que generar los estáticos de Django (ej: css, js, etc.) para que sean servidos por el NGINX.
+
+El Post [Python – Ejemplo de un proyecto básico con Python, Django y PyCharm - II]() tiene como objetivo ver los siguientes puntos:
+
+* Cómo generar páginas dinámicas desde el modelo de base de datos
+* Cómo entregar las páginas con estilos (ej: css, fuentes, imágenes, etc) y cómo realizar la gestión de dichos archivos estáticos.
+* Cómo crear páginas de formularios, que permitan a los usuarios no admins realizar operaciones CRUD (Create, Read, Update, Delete), mediante la auto-generación de formularios Django (ej: form.as_p, form.as_table, form.as_ul) y la extensión de vistas genéricas (ej: CreateView, UpdateView, DeleteView).
+* Cómo configurar la autenticación de usuarios (ej: log in, log out, sign up), mediante la auto-generación de formularios Django (ej: form.as_p, form.as_table, form.as_ul) y vistas genéricas (ej: LoginView, SignUpView), así como proteger los enlaces a los formularios para que sean accedidos sólo por usuarios autenticados.
 
 **Puedes apoyar mi trabajo haciendo "☆ Star" en el repo o nominarme a "GitHub Star"**. Muchas gracias :-) 
 

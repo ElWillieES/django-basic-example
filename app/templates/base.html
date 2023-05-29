@@ -1,8 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Django Basic Example</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster" rel="stylesheet">
 </head>
 <body>
 
@@ -13,9 +16,20 @@
             <li><a href="{% url 'home'%}">Home</a></li>
             <li><a href="{% url 'about'%}">About</a></li>
             <li><a href="{% url 'contact'%}">Contact</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'book_new'%}">New Book</a></li>
+            {% endif %}
         </ul>
     </nav>
 </header>
+
+{% if user.is_authenticated %}
+    <p>Hi {{ user.username }}! <a href="{% url 'logout' %}">Logout</a></p>
+{% else %}
+    <p>You are not logged in.
+        <a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">Signup</a></p>
+{% endif %}
+
 <hr>
 <section>
     {% block content %}

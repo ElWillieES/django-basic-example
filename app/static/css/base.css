@@ -1,0 +1,41 @@
+body {
+    font-family: 'Lobster', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 1rem;
+}
+
+header nav ul li:not(:last-child)::after {
+  content: "|";
+  margin-left: 0.5rem;
+}
+
+.book-details {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.book-details p {
+    margin: 0;
+}
