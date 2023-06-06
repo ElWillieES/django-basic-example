@@ -17,20 +17,6 @@ a:hover {
     text-decoration: underline;
 }
 
-header nav ul {
-  list-style-type: none;
-  display: flex;
-}
-
-header nav ul li {
-  margin-right: 1rem;
-}
-
-header nav ul li:not(:last-child)::after {
-  content: "|";
-  margin-left: 0.5rem;
-}
-
 .book-details {
     margin-top: 2rem;
     margin-bottom: 2rem;

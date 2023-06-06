@@ -3,6 +3,7 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?&style=flat&logo=docker&logoColor=ffffff)&nbsp;
 ![Python](https://img.shields.io/badge/Python-14354C?style=flat&logo=python&logoColor=white)&nbsp;
 ![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)&nbsp;
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white)&nbsp;
 ![NGINX](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white)&nbsp;
 
 ## Introducción
@@ -20,12 +21,13 @@ El Post [Python – Ejemplo de un proyecto básico con Python, Django y PyCharm]
 * Cómo crear Pruebas Unitarias en Django, incluyendo la forma de generar un informe de cobertura y de subirlo a Sonar.
 * Cómo dockerizar nuestra aplicación con un NGINX y Gunicorn como servidor de aplicaciones, teniendo en cuenta, que en este caso tenemos que generar los estáticos de Django (ej: css, js, etc.) para que sean servidos por el NGINX.
 
-El Post [Python – Ejemplo de un proyecto básico con Python, Django y PyCharm - II]() tiene como objetivo ver los siguientes puntos:
+El Post [Python – Ejemplo de un proyecto básico con Python, Django y PyCharm - II](https://elwillie.es/2023/05/29/ejemplo-de-un-proyecto-basico-con-python-django-y-pycharm-ii/) tiene como objetivo ver los siguientes puntos:
 
 * Cómo generar páginas dinámicas desde el modelo de base de datos
 * Cómo entregar las páginas con estilos (ej: css, fuentes, imágenes, etc) y cómo realizar la gestión de dichos archivos estáticos.
 * Cómo crear páginas de formularios, que permitan a los usuarios no admins realizar operaciones CRUD (Create, Read, Update, Delete), mediante la auto-generación de formularios Django (ej: form.as_p, form.as_table, form.as_ul) y la extensión de vistas genéricas (ej: CreateView, UpdateView, DeleteView).
 * Cómo configurar la autenticación de usuarios (ej: log in, log out, sign up), mediante la auto-generación de formularios Django (ej: form.as_p, form.as_table, form.as_ul) y vistas genéricas (ej: LoginView, SignUpView), así como proteger los enlaces a los formularios para que sean accedidos sólo por usuarios autenticados.
+* Cómo utilizar Bootstrap 5 y Django Crispy Forms para mejorar la presentación de nuestra Web.
 
 **Puedes apoyar mi trabajo haciendo "☆ Star" en el repo o nominarme a "GitHub Star"**. Muchas gracias :-) 
 
