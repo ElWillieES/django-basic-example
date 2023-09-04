@@ -27,6 +27,7 @@ El Post [Python – Ejemplo de un proyecto básico con Python, Django y PyCharm 
 * Cómo entregar las páginas con estilos (ej: css, fuentes, imágenes, etc) y cómo realizar la gestión de dichos archivos estáticos.
 * Cómo crear páginas de formularios, que permitan a los usuarios no admins realizar operaciones CRUD (Create, Read, Update, Delete), mediante la auto-generación de formularios Django (ej: form.as_p, form.as_table, form.as_ul) y la extensión de vistas genéricas (ej: CreateView, UpdateView, DeleteView).
 * Cómo configurar la autenticación de usuarios (ej: log in, log out, sign up), mediante la auto-generación de formularios Django (ej: form.as_p, form.as_table, form.as_ul) y vistas genéricas (ej: LoginView, SignUpView), así como proteger los enlaces a los formularios para que sean accedidos sólo por usuarios autenticados.
+* Cómo configurar la autorización de usuarios mediante el uso de LoginRequiredMixin y UserPassesTestMixin.
 * Cómo utilizar Bootstrap 5 y Django Crispy Forms para mejorar la presentación de nuestra Web.
 
 **Puedes apoyar mi trabajo haciendo "☆ Star" en el repo o nominarme a "GitHub Star"**. Muchas gracias :-) 
