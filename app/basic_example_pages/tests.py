@@ -1,8 +1,10 @@
+from django.contrib.auth import get_user_model
 from django.test import SimpleTestCase, TestCase
 from django.urls import reverse
 from datetime import datetime
 from .models import BookAuthor, Book
 
+TEST_ADMIN_PASSWORD = 'TEST_ADMIN_PASSWORD'
 class BookAuthorTests(TestCase):
     @classmethod
     def setUpTestData(cls):
@@ -15,6 +17,10 @@ class BookAuthorTests(TestCase):
 class BookTests(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.user = get_user_model().objects.create_user(
+            username="testuser", email="test@email.com", password=TEST_ADMIN_PASSWORD
+        )
+
         cls.author = BookAuthor.objects.create(name="Miguel Delibes", country="España")
         cls.book = Book.objects.create(title="El Camino", author=cls.author, genre="Fiction", publish_date="2006-03-16")
 
@@ -59,6 +65,7 @@ class BookTests(TestCase):
         self.assertTemplateUsed(response, "book_detail.html")
 
     def test_book_createview(self):
+        self.client.login(username='testuser', password=TEST_ADMIN_PASSWORD)
         response = self.client.post(
             reverse("book_new"),
             {
@@ -74,6 +81,7 @@ class BookTests(TestCase):
         self.assertEqual(Book.objects.last().publish_date, datetime.strptime("2000-01-31", "%Y-%m-%d").date())
 
     def test_book_updateview(self):  # new
+        self.client.login(username='testuser', password=TEST_ADMIN_PASSWORD)
         response = self.client.post(
             reverse("book_update", args="1"),
             {
